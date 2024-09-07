@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css'
-import Header from '../Header/header.jsx'
-import Banner from '../Banner/banner.jsx'
+import Header from '../../components/Header/header.jsx'
+import Banner from '../../components/Banner/banner.jsx'
 const Home = () => {
   return (
     <div>
