@@ -5,6 +5,8 @@ import Home from './screens/Home/home.jsx';
 import ConvictDetailsForm from './screens/ConvictDetails/ConvictDetailsForm';
 import Login from './screens/Login/login.jsx';
 import Botpress from './botfolder/botpress.jsx';
+import Profile from './components/Profile/profile.jsx';
+import ProfilePage from './screens/Profilepage/profilepage.jsx';
 
 function App() {
   return (
@@ -22,6 +24,14 @@ function App() {
 
           
           <Route path="/convictDetails" element={<ConvictDetailsForm />} />
+
+          <Route path="/profile/:aadhaarCardId" element={<Profile />} />
+
+
+
+          <Route path="/profilePage" element={<ProfilePage />} />
+
+
         </Routes>
       </div>
     </Router>
