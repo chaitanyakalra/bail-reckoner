@@ -6,8 +6,6 @@ import navigate from 'navigate';
 import Footer from '../../components/Footer/footer';
 const Home = () => {
 
-  
-
   // Handle button click to redirect to login page
   const handleAnonymousRegister = () => {
     navigate('/login'); // This will navigate to the login page
@@ -40,7 +38,7 @@ const Home = () => {
           <img src="https://tse1.mm.bing.net/th?id=OIP.Pxni4BJqrpgeMw-ARP-FBwHaGL&pid=Api&P=0&h=180" alt="Other Cyber Crime" className="card-image" style={{ width: '300px' }}/>
           <h3>Learning</h3>
           <div className="card-buttons">
-            <button className="btn">Login as User</button>
+            <button className="btn">General Info</button>
           </div>
         </div>
 
@@ -48,7 +46,7 @@ const Home = () => {
   <h3>What's New</h3>
   <div class="scroll-container">
     <div class="scroll-text">
-      <p>I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.</p>
+      <p>I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.</p>
     </div>
   </div>
 </div>

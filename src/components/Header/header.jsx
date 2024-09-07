@@ -28,13 +28,10 @@ const Header = () => {
       </div>
       <nav className="nav-section">
         <ul className="nav-links">
-          <li><a href="/register">REGISTER A COMPLAINT</a></li>
-          <li><a href="/track">TRACK YOUR COMPLAINT</a></li>
-          <li><a href="/suspect">SUSPECT DATA</a></li>
-          <li><a href="/cyber-volunteers">CYBER VOLUNTEERS</a></li>
-          <li><a href="/learning-corner">LEARNING CORNER</a></li>
-          <li><a href="/survey">CITIZEN SURVEY</a></li>
-          <li><a href="/contact">CONTACT US</a></li>
+          <li><a href="/register">Home</a></li>
+          <li><a href="/track">General Info</a></li>
+          <li><a href="/suspect">Login</a></li>
+          
         </ul>
       </nav>
     </header>
