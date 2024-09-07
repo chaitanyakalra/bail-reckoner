@@ -35,6 +35,10 @@ app.use((err, req, res, next) => {
 app.use(express.json());
 
 // app.use('/api', require('./Routes/UserData'));
+//mycodeashish for adminschema
+const adminEnter = require('../backend/routes/Routeadminenter');
+
+app.use('/', adminEnter);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');

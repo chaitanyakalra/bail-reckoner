@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose');
 const password = encodeURIComponent('BTLerf9moJ67u46k');
 
@@ -10,41 +9,36 @@ const maxRetries = 3; // Maximum number of retry attempts
 const retryInterval = 5000; // Retry interval in milliseconds (e.g., 5 seconds)
 
 let retryAttempts = 0; // Variable to track the number of retry attempts
+let isConnected = false; // Variable to track if connected successfully
 
 const connectToMongoDB = async () => {
+  if (isConnected) return; // Stop if already connected
+
   try {
     await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      // ssl: true,  // Enable SSL
-      
     });
-    
+
     console.log('Connected to MongoDB');
-    // You can use global.food_items and global.foodCategory here
+    isConnected = true; // Mark connection as successful
 
   } catch (error) {
-    // Check if the error is ECONNRESET
     if (error.code === 'ECONNRESET') {
       console.error('Connection reset by peer. Retrying connection...');
 
-      // Check if maximum retry attempts exceeded
       if (retryAttempts < maxRetries) {
-        // Increment retry attempts count
         retryAttempts++;
-
         console.log(`Retrying connection in ${retryInterval / 1000} seconds (Attempt ${retryAttempts}/${maxRetries})...`);
-
-        // Retry connection after delay
         setTimeout(connectToMongoDB, retryInterval);
       } else {
         console.error('Maximum retry attempts exceeded. Unable to connect to MongoDB.');
       }
     } else {
-      // For other errors, log the error and handle accordingly
       console.error('Error connecting to MongoDB:', error);
     }
   }
 };
 
+// Exporting the connection function
 module.exports = connectToMongoDB;
