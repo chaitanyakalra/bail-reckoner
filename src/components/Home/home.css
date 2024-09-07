@@ -1,0 +1,129 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  /* Full Width for Main Content */
+  .home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header Section */
+  .header {
+    background-color: #003366;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-section img {
+    height: 50px;
+    margin-right: 20px;
+  }
+  
+  .nav-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+  }
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #005599;
+  }
+  
+  /* Banner Section */
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    /* background-image: url('/assets/banner-background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional, for overlay effect */
+  }
+  
+  .banner-content {
+    position: relative;
+    text-align: center;
+    z-index: 1; /* Ensure content stays on top of overlay */
+  }
+  
+  .banner-content h2 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  
+  .banner-content p {
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  .banner-contact {
+    margin-top: 20px;
+  }
+  
+  .banner-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .banner-btn:hover {
+    background-color: #218838;
+  }

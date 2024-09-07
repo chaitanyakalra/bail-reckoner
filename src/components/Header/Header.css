@@ -1,0 +1,97 @@
+/* General Header Styles */
+.header {
+  background-color: #f5f5f5;
+  border-bottom: 5px solid #003366;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.left-section, .center-section, .right-section {
+  display: flex;
+  align-items: center;
+}
+
+/* Ensure logos are styled properly */
+.left-section .gov-logo, 
+.center-section .cyber-logo, 
+.right-section .azadi-logo {
+  height: 70px;
+  margin-right: 10px;
+}
+
+.ministry-text {
+  font-size: 14px;
+  text-align: left;
+}
+
+.ministry-text p {
+  margin: 0;
+}
+
+.portal-title {
+  text-align: center;
+}
+
+.hindi-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.english-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+.nav-section {
+  background-color: #0056A1;
+  padding: 10px 0;
+  width: 100%; /* Ensure it takes the full width below the header */
+  text-align: center; /* Center align the nav */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack the sections vertically */
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack navigation links vertically */
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px; /* Add space between stacked links */
+  }
+}

@@ -1,0 +1,36 @@
+.banner {
+    background-image: url('/src/assets/Sanchar-Saathi-portal.jpg'); /* Use your actual banner image path */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .banner-content h2 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .banner-content p {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .banner-contact {
+    margin-top: 20px;
+  }
+  
+  .banner-btn {
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .banner-btn:hover {
+    background-color: #218838;
+  }
+  
