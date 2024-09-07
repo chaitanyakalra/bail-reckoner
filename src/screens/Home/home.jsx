@@ -2,7 +2,15 @@ import React from 'react';
 import './home.css'
 import Header from '../../components/Header/header.jsx'
 import Banner from '../../components/Banner/banner.jsx'
+import navigate from 'navigate';
 const Home = () => {
+
+  
+
+  // Handle button click to redirect to login page
+  const handleAnonymousRegister = () => {
+    navigate('/login'); // This will navigate to the login page
+  };
   return (
     <div>
       <Header />
@@ -11,13 +19,16 @@ const Home = () => {
 
       {/* Card Section */}
       <div className="cards-container">
-        <div className="card">
-          <img src="/path-to-your-image/women-crime.png" alt="Women/Children Crime" className="card-image" />
-          <h3>WOMEN/CHILDREN RELATED CRIME</h3>
-          <div className="card-buttons">
-            <button className="btn">Register Anonymously</button>
-          </div>
-        </div>
+      <div className="card">
+      <img src="/path-to-your-image/women-crime.png" alt="Women/Children Crime" className="card-image" />
+      <h3>WOMEN/CHILDREN RELATED CRIME</h3>
+      <div className="card-buttons">
+        {/* Button to trigger navigation to login page */}
+        <button className="btn" onClick={handleAnonymousRegister}>
+          Register Anonymously
+        </button>
+      </div>
+    </div>
 
         <div className="card">
           <img src="/path-to-your-image/financial-fraud.png" alt="Financial Fraud" className="card-image" />

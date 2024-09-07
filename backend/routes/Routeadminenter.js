@@ -32,47 +32,54 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
-const adminDetail = require('../models/Schemaadmin'); // Schema for Admin
-const bcrypt = require('bcryptjs'); // To hash the password
-const { body, validationResult } = require('express-validator'); // For validations
+const adminDetail = require('../models/Schemaadmin'); // Admin schema
+const bcrypt = require('bcryptjs'); // For password hashing
+const { body, validationResult } = require('express-validator');
 
-// Route for Admin User Creation
+// Route for Admin Login or Registration
 router.post(
   '/admin-enter',
   [
-    body('id', 'ID is required').notEmpty(), // Ensure 'id' is not empty
-    body('password', 'Password must be at least 5 characters').isLength({ min: 5 }), // Password validation
+    body('password', 'Password must be at least 5 characters').isLength({ min: 5 }) // Password validation
   ],
   async (req, res) => {
-    // Check for validation errors
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(422).json({ success: false, errors: errors.array() });
-    }
-
     try {
-      // Check if admin ID already exists
-      const existingAdmin = await adminDetail.findOne({ id: req.body.id });
-      if (existingAdmin) {
-        return res.status(400).json({ success: false, message: 'Admin ID already exists' });
+      // Check for validation errors
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(422).json({ success: false, errors: errors.array() });
       }
 
-      // Hash the password using bcrypt
+      // Find if the admin already exists
+      const existingAdmin = await adminDetail.findOne({ id: req.body.id });
+
+      if (existingAdmin) {
+        // Admin exists, compare the provided password with the stored hashed password
+        const isPasswordCorrect = await bcrypt.compare(req.body.password, existingAdmin.password);
+
+        if (!isPasswordCorrect) {
+          return res.status(400).json({ success: false, message: 'Invalid credentials' });
+        }
+
+        // Password matches, login the admin
+        console.log('Admin logged in');
+        return res.status(200).json({ success: true, message: 'Admin logged in' });
+      }
+
+      // If admin doesn't exist, create a new one
       const salt = await bcrypt.genSalt(10);
       const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
-      // Create a new admin user
-      const adminLogin = new adminDetail({
+      const newAdmin = new adminDetail({
         id: req.body.id,
-        password: hashedPassword, // Store hashed password
+        password: hashedPassword,
       });
 
-      // Save the admin user in the database
-      await adminLogin.save();
+      await newAdmin.save();
 
-      console.log('Admin data added');
-      res.status(201).json({ success: true, message: 'Admin data added successfully' });
-      
+      console.log('New admin registered');
+      res.status(201).json({ success: true, message: 'Admin registered successfully' });
+
     } catch (error) {
       console.log('The error is:', error);
       res.status(500).json({ success: false, message: 'Internal server error' });

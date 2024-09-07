@@ -151,6 +151,7 @@
 //     background-color: #1564c0;
 //     `;
 
+import navigate from 'navigate';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -160,46 +161,45 @@ export default function Login() {
     password: '',
   });
 
+  const onChange = (e) => {
+    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      const response = await fetch('http://localhost:4900/api/admin-enter', {
+      const response = await fetch('http://localhost:4900/admin-enter', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id: credentials.id, // Sending 'id'
+          id: credentials.id,  // 'id' is the field you're using for the admin ID
           password: credentials.password,
         }),
       });
-
-      console.log("Fetch working");
-
+  
       const json = await response.json();
-      console.log("json", json);
-
+      console.log('json', json);
+  
+      // Handle different responses from the backend
       if (!json.success) {
-        alert('Enter Valid Credentials');
+        if (json.message === 'Invalid credentials') {
+          alert('Incorrect password. Please try again.');
+        } else {
+          alert('Error: ' + json.message);
+        }
       } else {
-        localStorage.setItem("adminId", credentials.id);
-        localStorage.setItem("authToken", json.authToken);
-        console.log(localStorage.getItem("authToken"));
-        console.log(localStorage.getItem("adminId"));
-
-        // Replace this with your navigation logic
-        // navigate('/');
+        // If login or registration is successful
+        console.log('Success:', json.message);
+        localStorage.setItem('authToken', json.authToken); // Store any token if you have authentication
+        navigate('/'); // Redirect to the homepage
       }
-
-      console.log('Response:', response);
+  
     } catch (error) {
       console.error('Error submitting form:', error);
     }
-  };
-
-  const onChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
   return (
