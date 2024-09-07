@@ -11,6 +11,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express-validator": "^7.2.0",
+    "lucide-react": "^0.439.0",
     "moongose": "^1.0.0",
     "navigate": "^0.3.6",
     "react": "^18.3.1",
@@ -44,6 +45,4 @@
       "last 1 safari version"
     ]
   }
-
-  
 }

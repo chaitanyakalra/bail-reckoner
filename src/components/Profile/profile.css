@@ -1,58 +1,57 @@
 .profile-box {
-    width: 500px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-    position: relative;
-    margin-left: 500px;
-    margin-top: 90px;
-    height: auto; /* Allow height to adjust based on content */
-  }
-  
-  .profile-header {
-    display: flex;
-    align-items: flex-start; /* Align details at the top near the image */
-    margin-bottom: 10px; /* Reduce margin to shift details upwards */
-  }
-  
-  .profile-img {
-    width: 180px;  /* Set the width */
-    height: 220px; /* Set the height */
-    object-fit: cover;
-    border-radius: 0; /* Make it a square/rectangle */
-    border: 3px solid #333; /* Slightly thicker border */
-    margin-right: 20px; /* Adjust spacing between the image and details */
-  }
-  
-  .profile-details {
-    margin-top: -50%;
-    margin-left: 200px;
-    margin-bottom: 310px;
-    text-align: left;
-    font-size: 16px;
-    line-height: 2.5; /* Adjust line height to reduce spacing between details */
-    color: #333;
-  }
-  
-  .profile-details strong {
-    color: #000;
-    font-weight: bold;
-  }
-  
-  .profile-crimes {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin-top: 40px; /* Adds space between the details and crimes section */
-    margin-right: 300px;
-    margin-top: -60%;
-    margin-bottom: 200px;
-  }
-  
-  .profile-crimes strong {
-    font-weight: bold;
-    color: #000;
-  }
-  
+  width: 500px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  margin-left: 500px;
+  margin-top: 90px;
+  height: auto; /* Allow height to adjust based on content */
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start; /* Align details at the top near the image */
+  margin-bottom: 10px; /* Reduce margin to shift details upwards */
+}
+
+.profile-img {
+  width: 180px;  /* Set the width */
+  height: 220px; /* Set the height */
+  object-fit: cover;
+  border-radius: 0; /* Make it a square/rectangle */
+  border: 3px solid #333; /* Slightly thicker border */
+  margin-right: 20px; /* Adjust spacing between the image and details */
+}
+
+.profile-details {
+  margin-top: -50%;
+  margin-left: 200px;
+  margin-bottom: 310px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 2.5; /* Adjust line height to reduce spacing between details */
+  color: #333;
+}
+
+.profile-details strong {
+  color: #000;
+  font-weight: bold;
+}
+
+.profile-crimes {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 40px; /* Adds space between the details and crimes section */
+  margin-right: 300px;
+  margin-top: -60%;
+  margin-bottom: 200px;
+}
+
+.profile-crimes strong {
+  font-weight: bold;
+  color: #000;
+}
