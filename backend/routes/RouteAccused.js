@@ -8,7 +8,7 @@ const Accused = require('../models/AccusedList'); // Assuming your schema is in 
 router.get('/crimes/:aadhaarCardId', async (req, res) => {
   try {
 
-    console.log(req.params.aadhaarCardId);
+    // console.log(req.params.aadhaarCardId);
     
     const { aadhaarCardId } = req.params;
     const accused = await Accused.findOne({ aadhaarCardId });
@@ -17,7 +17,22 @@ router.get('/crimes/:aadhaarCardId', async (req, res) => {
       return res.status(404).json({ message: 'Accused not found' });
     }
 
-    res.json({ crimes: accused.crimes });
+    res.json({
+        _id: accused._id,
+        image: accused.image,
+        prisonerNo: accused.prisonerNo,
+        aadhaarCardId: accused.aadhaarCardId,
+        name: accused.name,
+        age: accused.age,
+        yearsOfImprisonment: accused.yearsOfImprisonment,
+        jurisdiction: accused.jurisdiction,
+        crimes: accused.crimes,
+        suretyBonds: accused.suretyBonds,
+        personalBonds: accused.personalBonds,
+        fines: accused.fines,
+        createdAt: accused.createdAt,
+        updatedAt: accused.updatedAt,
+      });
   } catch (error) {
     res.status(500).json({ message: 'Server error', error });
   }
@@ -33,5 +48,7 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: 'Error creating accused', error });
   }
 });
+
+
 
 module.exports = router;
