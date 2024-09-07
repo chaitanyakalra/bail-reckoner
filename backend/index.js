@@ -8,7 +8,7 @@ const port = process.env.PORT || 4900;
 
 
 // Use environment variable for port if available
-
+const accusedRoutes = require('./routes/RouteAccused');
 const connectToMongoDB = require('./db');
 // const userRoutes = require('./Routes/UserData');
 
@@ -39,6 +39,7 @@ app.use(express.json());
 const adminEnter = require('../backend/routes/Routeadminenter');
 
 app.use('/', adminEnter);
+app.use('/api/accused', accusedRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
