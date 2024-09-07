@@ -25,4 +25,4 @@ const adminDetail = mongoose.model('admindetail' , adminSchema);
 
 module.exports = adminDetail;
 
-console.log("created schema");
+// console.log("created schema");
