@@ -87,7 +87,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .card {
@@ -146,20 +146,36 @@
   padding: 20px;
   text-align: left;
   justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
-}
-
-.whats-new:hover {
-  transform: translateY(-10px); /* Hover effect for "What's New" card */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  height: 320px; /* Keep the height the same */
+  overflow: hidden; /* Hide the overflowing text */
 }
 
 .whats-new h3 {
   margin-bottom: 10px;
 }
 
-.whats-new p {
-  font-size: 16px;
+.scroll-container {
+  height: 250px; /* Adjust this to fit the space for scrolling content */
+  overflow: hidden; /* Hide overflow to create the scrolling effect */
+  position: relative;
+}
+
+.scroll-text {
+  display: inline-block;
+  position: absolute;
+  top: 100%; /* Start the text below the container */
+  animation: scroll-up 10s linear infinite; /* Control speed of scroll */
+}
+
+@keyframes scroll-up {
+  0% {
+    top: 100%; /* Start from below the container */
+  }
+  100% {
+    top: -100%; /* Scroll all the way to the top and disappear */
+  }
 }
 
   .learning-corner {

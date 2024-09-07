@@ -13,12 +13,16 @@ const Profile = ({ criminal }) => {
         <h2 className="name"></h2>
       </div>
       <div className="profile-details">
-        <p><strong>Kaidi No.:</strong></p>
-        <p><strong>Aadhar No.:</strong> </p>
-        <p><strong>Age:</strong> </p>
-        <p><strong>Year of Imprisonment:</strong> </p>
-        <p><strong>Jurisdiction:</strong> </p>
-        <p><strong>Crimes Committed:</strong></p>
+        <p><strong>Kaidi No :</strong>101</p>
+        <p><strong>Aadhar No :</strong> 8234 2342 2342 4234 </p>
+        <p><strong>Age :</strong> 56 </p>
+        <p><strong>Year of Imprisonment :</strong> 2016 </p>
+        <p><strong>Jurisdiction :</strong> Gurgaon </p>
+      </div>
+      <div className='profile-crimes'>
+            <p><strong>Crimes Committed:</strong>Murder Assualt Rape Theft
+            
+            </p>
       </div>
     </div>
   );

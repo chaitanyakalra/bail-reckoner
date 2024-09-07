@@ -3,6 +3,7 @@ import './home.css'
 import Header from '../../components/Header/header.jsx'
 import Banner from '../../components/Banner/banner.jsx'
 import navigate from 'navigate';
+import Footer from '../../components/Footer/footer';
 const Home = () => {
 
   
@@ -43,10 +44,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="card whats-new">
-          <h3>What's New</h3>
-          <p>I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE.</p>
-        </div>
+        <div class="whats-new">
+  <h3>What's New</h3>
+  <div class="scroll-container">
+    <div class="scroll-text">
+      <p>I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE. New policies regarding undertrial prisoners have been updated. Legal Aid resources are now available online. Stay updated with key judicial rulings and changes.</p>
+    </div>
+  </div>
+</div>
+
       </div>
 
     {/* Learning Corner Section */}
@@ -84,6 +90,7 @@ const Home = () => {
           
         </div>
       </div>
+      <Footer/>
 
     </div>
   );

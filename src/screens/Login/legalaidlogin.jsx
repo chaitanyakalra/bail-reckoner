@@ -1,12 +1,12 @@
-import navigate from 'navigate';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+
 import Header from '../../components/Header/header';
 import Footer from '../../components/Footer/footer';
 
-export default function Login() {
+export default function LegalAidLogin() {
   const [credentials, setCredentials] = useState({
-    id: '',
+    id: '', 
     password: '',
   });
 
@@ -14,49 +14,22 @@ export default function Login() {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('http://localhost:4900/admin-enter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          id: credentials.id,
-          password: credentials.password,
-        }),
-      });
-
-      const json = await response.json();
-      console.log('json', json);
-
-      if (!json.success) {
-        if (json.message === 'Invalid credentials') {
-          alert('Incorrect password. Please try again.');
-        } else {
-          alert('Error: ' + json.message);
-        }
-      } else {
-        console.log('Success:', json.message);
-        localStorage.setItem('authToken', json.authToken);
-        navigate('/');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
+    console.log('Form submitted with:', credentials);
+    // You can handle the frontend form submission logic here, 
+    // such as validation or state updates.
   };
 
   return (
     <Wrapper>
-      <Header />
+      <Header/>
       <Content>
-        <Container>
+        <Container>    
           <Form onSubmit={handleSubmit}>
-            <Title>Admin Login</Title>
+            <Title>Legal Aid Login</Title>
             <FormGroup>
-              <Label htmlFor="id">Admin ID</Label>
+              <Label htmlFor="id">Aadhar No.</Label>
               <Input
                 type="text"
                 id="id"
@@ -67,7 +40,7 @@ export default function Login() {
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">Client's Name</Label>
               <Input
                 type="password"
                 id="password"
@@ -79,16 +52,15 @@ export default function Login() {
             </FormGroup>
             <Button type="submit" id="submit">Log in</Button>
           </Form>
-          <Disclaimer>For official use only. Unauthorized access is prohibited.</Disclaimer>
+          <Disclaimer>For Legal Aid access only. Unauthorized access is prohibited.</Disclaimer>
         </Container>
       </Content>
-      <Footer />
+      <Footer/>
     </Wrapper>
   );
 }
 
-// Styled components
-
+// Styled components (updated)
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -96,7 +68,7 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  flex: 1;
+  flex: 1; /* Ensures that the content expands to fill available space */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +80,9 @@ const Container = styled.div`
   background-color: #3a3a3a;
   border-radius: 10px;
   padding: 40px;
+  margin-top:100px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom:100px;
 `;
 
 const Form = styled.form`
