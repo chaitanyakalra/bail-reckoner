@@ -1,23 +1,27 @@
 .banner {
-    background-image: url('https://lawtrend.in/wp-content/uploads/2023/06/Lawyer-gavel.png'); /* Path to your image */
+    background-image: url('/src/assets/banner.jpeg'); /* Path to your image */
     background-size: cover; /* Ensures the whole image is visible */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     color: #ffffff;
     text-align: center;
     padding: 50px 20px;
-    height: 500px;
+    height: 650px;
     min-height: 300px; /* Ensures the banner takes up enough vertical space */
   }
   
   .banner-content h2 {
-    font-size: 28px;
+    font-size: 50px;
     font-weight: bold;
+    margin-top: 150px
   }
   
   .banner-content p {
-    font-size: 20px;
+    font-size: 30px;
     margin: 10px 0;
+    text-align: center;
+    vertical-align:middle;
+    
   }
   
   .banner-contact {

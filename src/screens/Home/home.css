@@ -164,7 +164,7 @@
 
   .learning-corner {
     padding: 2rem 2%;
-    margin-left: -2%;
+    margin-left: -1%;
     transition: background-color 0.3s ease; /* Smooth transition for background color */
   }
   
@@ -203,6 +203,7 @@
   .learning-image {
     width: 250px;
     margin-bottom: 1rem;
+    margin-left: -2%;
   }
   
   .learning-card h3 {
