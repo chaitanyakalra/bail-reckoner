@@ -1,8 +1,16 @@
 import React from 'react';
 import './home.css'
-import Header from '../Header/header.jsx'
-import Banner from '../Banner/banner.jsx'
+import Header from '../../components/Header/header.jsx'
+import Banner from '../../components/Banner/banner.jsx'
+import navigate from 'navigate';
 const Home = () => {
+
+  
+
+  // Handle button click to redirect to login page
+  const handleAnonymousRegister = () => {
+    navigate('/login'); // This will navigate to the login page
+  };
   return (
     <div>
       <Header />
