@@ -81,74 +81,89 @@
     text-decoration: underline;
   }
   
-  /* Cards styling */
+ /* Cards styling */
 .cards-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .card img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 15px;
-  }
-  
-  .card h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #333;
-  }
-  
-  .card-buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .card-buttons .btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .card-buttons .btn:hover {
-    background-color: #218838;
-  }
-  
-  .whats-new {
-    background: linear-gradient(to right, #003366, #dc3545);
-    color: white;
-    padding: 20px;
-    text-align: left;
-    justify-content: space-between;
-  }
-  
-  .whats-new h3 {
-    margin-bottom: 10px;
-  }
-  
-  .whats-new p {
-    font-size: 16px;
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Card moves up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.card img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons .btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition for buttons */
+}
+
+.card-buttons .btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.whats-new {
+  background: linear-gradient(to right, #003366, #dc3545);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+.whats-new:hover {
+  transform: translateY(-10px); /* Hover effect for "What's New" card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.whats-new h3 {
+  margin-bottom: 10px;
+}
+
+.whats-new p {
+  font-size: 16px;
+}
 
   .learning-corner {
     padding: 2rem 2%;
+    margin-left: -2%;
     transition: background-color 0.3s ease; /* Smooth transition for background color */
   }
   
@@ -172,7 +187,7 @@
     background-color: #d6eaf8; /* Light blue background */
     border-radius: 10px;
     padding: 1.5rem;
-    width: 23%; /* Adjust width to fit 4 cards in a single row */
+    width: 20%; /* Adjust width to fit 4 cards in a single row */
     margin: 0 1%; /* Adds margin between the cards */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -185,7 +200,7 @@
   }
   
   .learning-image {
-    width: 60px;
+    width: 300px;
     margin-bottom: 1rem;
   }
   
