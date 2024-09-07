@@ -1,6 +1,6 @@
 
 const mongoose = require('mongoose');
-const password = encodeURIComponent('Kalra@12345');
+const password = encodeURIComponent('BTLerf9moJ67u46k');
 
 // Update the MongoDB connection URI with the correct format ${password}
 const mongoURI = `mongodb+srv://chaitanyakalra7:${password}@bailreckonercluster.dfw6v.mongodb.net/?retryWrites=true&w=majority&appName=BailReckonerCluster`;
@@ -19,11 +19,8 @@ const connectToMongoDB = async () => {
       // ssl: true,  // Enable SSL
       
     });
-
-    console.log('Connected to MongoDB');
-
     
-
+    console.log('Connected to MongoDB');
     // You can use global.food_items and global.foodCategory here
 
   } catch (error) {
