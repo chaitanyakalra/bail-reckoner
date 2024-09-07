@@ -146,8 +146,95 @@
   .whats-new p {
     font-size: 16px;
   }
+
+  .learning-corner {
+    padding: 2rem 2%;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .learning-corner:hover {
+    background-color: #f0f8ff; /* Light hover effect on the learning corner */
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .learning-cards {
+    display: flex;
+    justify-content: space-between; /* Ensures space between each card */
+    flex-wrap: nowrap; /* Keeps cards in a single line */
+  }
+  
+  .learning-card {
+    background-color: #d6eaf8; /* Light blue background */
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 23%; /* Adjust width to fit 4 cards in a single row */
+    margin: 0 1%; /* Adds margin between the cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .learning-card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  }
+  
+  .learning-image {
+    width: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .learning-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .learning-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
   
   /* Media Queries for Responsive Design */
+
+  @media (max-width: 1200px) {
+    .learning-card {
+      width: 30%; /* Adjusts the width for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .learning-cards {
+      flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    }
+    
+    .learning-card {
+      width: 45%; /* Adjusts the width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .learning-card {
+      width: 100%; /* Full width for very small screens */
+    }
+  }
+  
 
   @media (max-width: 1200px) {
     .cards-container {
