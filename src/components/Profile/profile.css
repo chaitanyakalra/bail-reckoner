@@ -1,0 +1,57 @@
+.profile-box {
+    width: 400px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    margin-left: 550px;
+    margin-top: 150px;
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+    margin-right: 20px;
+  }
+  
+  .name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-details {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .profile-details strong {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  /* .profile-box::before {
+    content: 'Top Secret';
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transform: rotate(-15deg);
+    border: 2px solid red;
+    padding: 5px;
+  } */
+  

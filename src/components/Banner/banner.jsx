@@ -5,13 +5,34 @@ const Banner = () => {
   return (
     <div className="banner">
       <div className="banner-content">
-      <h2>अपराध एक समाज का काला धब्बा है</h2>
-      <p>"अपराध केवल कानून का उल्लंघन नहीं, बल्कि समाज के नैतिकता और सुरक्षा का भी उल्लंघन है।</p>
-      {/* <p> एक सुरक्षित और स्वस्थ समाज के लिए हमें सभी मिलकर अपराधों को रोकने के प्रयास करने चाहिए।"</p> */}
+      <h2>Crime: A Stain on Society</h2>
+      <p>"Crime is not merely a violation of the law; it represents a deeper assault on the moral fabric and safety of society."</p>
+      </div>
         <div className="banner-contact">
           {/* <p>ऑनलाइन वित्तीय धोखाधड़ी की रिपोर्ट करने के लिए 1930 पर कॉल करें</p> */}
         </div>
-      </div>
+        <div class="stats-banner">
+        <div class="stat-item">
+            <div class="stat-icon">📄✅</div>
+            <p class="stat-value">1700+</p>
+            <p class="stat-label">Trusted Clients</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">📄✅</div>
+            <p class="stat-value navy-text">$180 M</p>
+            <p class="stat-label">Recovered</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">⚖️</div>
+            <p class="stat-value">98%</p>
+            <p class="stat-label">Successful Cases</p>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">⚖️</div>
+            <p class="stat-value">10,6</p>
+            <p class="stat-label">Injury Cases</p>
+        </div>
+    </div>
     </div>
   );
 };
