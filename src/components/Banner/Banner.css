@@ -1,5 +1,5 @@
 .banner {
-    background-image: url('/src/assets/Sanchar-Saathi-portal.jpg'); /* Path to your image */
+    background-image: url('https://lawtrend.in/wp-content/uploads/2023/06/Lawyer-gavel.png'); /* Path to your image */
     background-size: cover; /* Ensures the whole image is visible */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */

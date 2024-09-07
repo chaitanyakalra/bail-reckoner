@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="left-section">
-          <img src="/assets/gov-logo.png" alt="Government of India" className="gov-logo" />
+          <img src="https://tse2.mm.bing.net/th?id=OIP.H7taM0mDf-Pb5mAm5qsSOwHaHa&pid=Api&P=0&h=180" alt="Government of India" className="gov-logo" />
           <div className="ministry-text">
             <p>भारत सरकार</p>
             <p>GOVERNMENT OF INDIA</p>
@@ -15,14 +15,15 @@ const Header = () => {
           </div>
         </div>
         <div className="center-section">
-          <img src="/assets/cyber-logo.png" alt="Indian Cyber Crime Coordination" className="cyber-logo" />
-          <div className="portal-title">
-            <p className="hindi-title">राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल</p>
-            <p className="english-title">National Cyber Crime Reporting Portal</p>
-          </div>
-        </div>
+  <div className="portal-title">
+    <p className="hindi-title"></p>
+    <p className="english-title">Official Bail Reckoner:</p>
+    <p className="english-title">Your Guide to Bail Procedures and Regulations</p>
+  </div>
+</div>
+
         <div className="right-section">
-          <img src="/assets/azadi-logo.png" alt="Azadi Ka Amrit Mahotsav" className="azadi-logo" />
+          <img src="https://tse4.mm.bing.net/th?id=OIP.qmFuZ_CsgS4Pb-cLkt7X4QHaHa&pid=Api&P=0&h=180" alt="Azadi Ka Amrit Mahotsav" className="azadi-logo" />
         </div>
       </div>
       <nav className="nav-section">

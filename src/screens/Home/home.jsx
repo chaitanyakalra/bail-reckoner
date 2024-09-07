@@ -20,29 +20,20 @@ const Home = () => {
       {/* Card Section */}
       <div className="cards-container">
         <div className="card">
-          <img src="/path-to-your-image/women-crime.png" alt="Women/Children Crime" className="card-image" />
-          <h3>WOMEN/CHILDREN RELATED CRIME</h3>
+          <img src="https://tse1.mm.bing.net/th?id=OIP.S3cM8ki8_erjYCaeT3CTYAHaHa&pid=Api&P=0&h=180" alt="Women/Children Crime" className="card-image" />
+          <h3>Admin/Judicial Authority</h3>
           <div className="card-buttons">
             <button className="btn">Login As Admin</button>
           </div>
         </div>
 
         <div className="card">
-          <img src="/path-to-your-image/financial-fraud.png" alt="Financial Fraud" className="card-image" />
-          <h3>FINANCIAL FRAUD</h3>
+          <img src="https://tse1.mm.bing.net/th?id=OIP.pCkFq-7tno2hej8WnRHSbwHaEn&pid=Api&P=0&h=180" alt="Financial Fraud" className="card-image" />
+          <h3>LEGAL ADVISOR</h3>
           <div className="card-buttons">
             <button className="btn">Login as Legal Aid Provider</button>
           </div>
         </div>
-
-        <div className="card">
-          <img src="/path-to-your-image/other-cyber-crime.png" alt="Other Cyber Crime" className="card-image" />
-          <h3>OTHER CYBER CRIME</h3>
-          <div className="card-buttons">
-            <button className="btn">Login as User</button>
-          </div>
-        </div>
-
         <div className="card whats-new">
           <h3>What's New</h3>
           <p>I4C, Intelligence Bureau, and Delhi Police. The claim is FAKE.</p>
