@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Accused = require('../models/AccusedList'); // Assuming your schema is in models folder
+const Accused = require('../models/AccusedList2'); // Assuming your schema is in models folder
 
 // Route to fetch crimes by Aadhaar card ID
 router.get('/crimes/:aadhaarCardId', async (req, res) => {
@@ -26,7 +26,8 @@ router.get('/crimes/:aadhaarCardId', async (req, res) => {
         age: accused.age,
         yearsOfImprisonment: accused.yearsOfImprisonment,
         jurisdiction: accused.jurisdiction,
-        crimes: accused.crimes,
+        crimes: accused.crimes,  // Fetch crimes
+        ipcSections: accused.ipcSections,  // Fetch ipc sections
         suretyBonds: accused.suretyBonds,
         personalBonds: accused.personalBonds,
         fines: accused.fines,

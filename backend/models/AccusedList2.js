@@ -64,7 +64,7 @@ const accusedSchema = new Schema({
 });
 
 // Create the model
-const Accused = mongoose.model('AccusedList', accusedSchema);
+const Accused = mongoose.model('AccusedList2', accusedSchema);
 console.log("schema created");
 
 module.exports = Accused;

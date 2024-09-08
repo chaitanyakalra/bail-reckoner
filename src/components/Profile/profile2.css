@@ -1,0 +1,303 @@
+
+.header {
+    background-color: #f5f5f5;
+    border-bottom: 5px solid #003366;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    flex-wrap: wrap; /* Allows elements to wrap if needed */
+  }
+  
+  .left-section, .center-section, .right-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Ensure logos are styled properly */
+  .left-section .gov-logo, 
+  .center-section .cyber-logo, 
+  .right-section .azadi-logo {
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  .ministry-text {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .ministry-text p {
+    margin: 0;
+  }
+  
+  .portal-title {
+    text-align: center;
+  }
+  
+  .hindi-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .english-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  /* Navigation Styles */
+  .nav-section {
+    background-color: #0056A1;
+    padding: 10px 0;
+    width: 100%; /* Full width below the header */
+    text-align: center; /* Center the buttons */
+    display: block; /* Make sure it's on a new line */
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline;
+  }
+  
+ /* Cards styling */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Card moves up slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.card img {
+  width: 95%px;
+  height: 180px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-buttons .btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover transition for buttons */
+}
+
+.card-buttons .btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.whats-new {
+  background: linear-gradient(to right, #003366, #dc3545);
+  color: white;
+  padding: 20px;
+  text-align: left;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  height: 320px; /* Keep the height the same */
+  overflow: hidden; /* Hide the overflowing text */
+}
+
+.whats-new h3 {
+  margin-bottom: 10px;
+}
+
+.scroll-container {
+  height: 250px; /* Adjust this to fit the space for scrolling content */
+  overflow: hidden; /* Hide overflow to create the scrolling effect */
+  position: relative;
+}
+
+.scroll-text {
+  display: inline-block;
+  position: absolute;
+  top: 100%; /* Start the text below the container */
+  animation: scroll-up 10s linear infinite; /* Control speed of scroll */
+}
+
+@keyframes scroll-up {
+  0% {
+    top: 100%; /* Start from below the container */
+  }
+  100% {
+    top: -100%; /* Scroll all the way to the top and disappear */
+  }
+}
+
+  .learning-corner {
+    padding: 2rem 2%;
+    margin-left: -1%;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  .learning-corner:hover {
+    background-color: #f0f8ff; /* Light hover effect on the learning corner */
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .learning-cards {
+    display: flex;
+    justify-content: space-between; /* Ensures space between each card */
+    flex-wrap: nowrap; /* Keeps cards in a single line */
+  }
+  
+  .learning-card {
+    background-color: #d6eaf8; /* Light blue background */
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 20%; /* Adjust width to fit 4 cards in a single row */
+    margin: 0 1%; /* Adds margin between the cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .learning-card:hover {
+    transform: translateY(-10px); /* Slight upward movement on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+  }
+  
+  .learning-image {
+    width: 250px;
+    margin-bottom: 1rem;
+    margin-left: -2%;
+  }
+  
+  .learning-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .learning-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .read-more {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+  }
+  
+  
+  /* Media Queries for Responsive Design */
+
+  @media (max-width: 1200px) {
+    .learning-card {
+      width: 30%; /* Adjusts the width for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .learning-cards {
+      flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    }
+    
+    .learning-card {
+      width: 45%; /* Adjusts the width for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .learning-card {
+      width: 100%; /* Full width for very small screens */
+    }
+  }
+  
+
+  @media (max-width: 1200px) {
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .card {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column; /* Stack header sections vertically on smaller screens */
+      text-align: center;
+    }
+  
+    .nav-links {
+      flex-direction: column; /* Stack navigation links vertically */
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin-bottom: 10px; /* Add space between stacked links */
+    }
+  }
+  
