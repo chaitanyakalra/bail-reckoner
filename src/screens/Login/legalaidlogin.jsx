@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirection
+import axios from 'axios'; // For API requests
 import styled from 'styled-components';
 
 import Header from '../../components/Header/header';
@@ -7,18 +9,37 @@ import Footer from '../../components/Footer/footer';
 export default function LegalAidLogin() {
   const [credentials, setCredentials] = useState({
     id: '', 
-    password: '',
+    name: '', // Changed from password to name
   });
+  const [error, setError] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate for redirection
 
-  const onChange = (e) => {
-    setCredentials({ ...credentials, [e.target.name]: e.target.value });
+  const onChange = async (e) => {
+    const { name, value } = e.target;
+    setCredentials(prevState => ({ ...prevState, [name]: value }));
+
+    // Fetch client's name when Aadhaar number changes
+    if (name === 'id' && value) {
+      try {
+        const response = await axios.get(`http://localhost:4900/api/accused/crimes/${value}`);
+        if (response.data) {
+          setCredentials(prevState => ({ ...prevState, name: response.data.name }));
+          setError(''); // Clear any previous errors
+        } else {
+          setCredentials(prevState => ({ ...prevState, name: '' }));
+          setError('Aadhaar number not found.');
+        }
+      } catch (err) {
+        setError('An error occurred. Please try again.');
+      }
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted with:', credentials);
-    // You can handle the frontend form submission logic here, 
-    // such as validation or state updates.
+
+    // Additional validation or handling can be done here if needed
+    navigate('/legal-aid-home', { state: { clientName: credentials.name, kaidiNo: credentials.id } });
   };
 
   return (
@@ -29,7 +50,7 @@ export default function LegalAidLogin() {
           <Form onSubmit={handleSubmit}>
             <Title>Legal Aid Login</Title>
             <FormGroup>
-              <Label htmlFor="id">Aadhar No.</Label>
+              <Label htmlFor="id">Aadhaar No.</Label>
               <Input
                 type="text"
                 id="id"
@@ -40,17 +61,19 @@ export default function LegalAidLogin() {
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Client's Name</Label>
+              <Label htmlFor="name">Client's Name</Label>
               <Input
-                type="password"
-                id="password"
-                name="password"
-                value={credentials.password}
-                onChange={onChange}
+                type="text"
+                id="name"
+                name="name" // Renamed to "name"
+                value={credentials.name}
+                onChange={onChange} // Optional, if you want to allow editing
                 required
+                disabled // Disable the field to prevent editing
               />
             </FormGroup>
             <Button type="submit" id="submit">Log in</Button>
+            
           </Form>
           <Disclaimer>For Legal Aid access only. Unauthorized access is prohibited.</Disclaimer>
         </Container>
@@ -59,7 +82,6 @@ export default function LegalAidLogin() {
     </Wrapper>
   );
 }
-
 // Styled components (updated)
 const Wrapper = styled.div`
   display: flex;

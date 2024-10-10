@@ -11,6 +11,7 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express-validator": "^7.2.0",
+    "framer-motion": "^11.5.4",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.3",
     "lucide-react": "^0.439.0",

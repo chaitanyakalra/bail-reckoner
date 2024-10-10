@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/src/assets/bail1-transformed.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bail-in-india {
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #1e40af;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5em;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ff6b6b, #4ecdc4);
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-of-contents {
+  flex: 0 0 250px;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 8px 0 0 8px;
+  margin: 20px 0px 0px 30px;
+}
+
+.table-of-contents h2 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.table-of-contents li {
+  margin-bottom: 15px;
+}
+
+.table-of-contents a {
+  color: #1e40af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-of-contents a:hover {
+  color: #2563eb;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+section.active {
+  border-left: 4px solid #1e40af;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  color: #1e40af;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+  color: #2c5282;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.important-notice {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: pulse 2s infinite;
+}
+
+.important-notice svg {
+  color: #856404;
+}
+
+.important-notice p {
+  margin: 0;
+  font-style: italic;
+}
+
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5em;
+  color: #1e40af;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 193, 7, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 193, 7, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .table-of-contents {
+    position: static;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+}

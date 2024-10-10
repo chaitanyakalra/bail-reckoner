@@ -25,12 +25,13 @@ const Footer = () => {
         <User size={20} color="#ff69b4" /> <span>  |  </span>
         <MessageCircle size={20} color="#25D366" />
       </div>
-      <div className="footer-info">
-        <p>Website Content Managed by Ministry of Home Affairs, Govt. of India. Best viewed in Mozilla Firefox, Google Chrome [A].</p></div>
+      <div className="footer-info" style={{}}>
+        <p style={{textAlign:'center'}}>Website Content Managed by Ministry of Home Affairs, Govt. of India. Best viewed in Mozilla Firefox, Google Chrome [A].</p>
+        </div>
         <div id="visitor-info" >
           <div>Visitor Count: 171458801</div>
           <div>Last Updated: 08/08/2024</div>
-        </div>
+      </div>
     </footer>
   );
 };

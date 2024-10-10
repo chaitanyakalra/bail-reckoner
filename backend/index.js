@@ -103,8 +103,10 @@ app.use((err, req, res, next) => {
   next();
 });
 
+const adminRoute = require('./routes/Routeadminenter');
 // Register routes
 app.use('/api/accused', accusedRoutes);
+app.use('/',adminRoute);
 
 // Example route for testing
 app.get('/', (req, res) => {

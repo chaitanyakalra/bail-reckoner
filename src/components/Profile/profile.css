@@ -1,57 +1,138 @@
 .profile-box {
   width: 500px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
   font-family: 'Arial', sans-serif;
-  position: relative;
-  margin-left: 500px;
-  margin-top: 90px;
-  height: auto; /* Allow height to adjust based on content */
+  margin: 50px auto;
+  height: auto;
+  transition: all 0.3s ease-in-out; /* Smooth transition for height changes */
 }
 
 .profile-header {
   display: flex;
-  align-items: flex-start; /* Align details at the top near the image */
-  margin-bottom: 10px; /* Reduce margin to shift details upwards */
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.imageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile-img {
-  width: 180px;  /* Set the width */
-  height: 220px; /* Set the height */
+  width: 160px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 0; /* Make it a square/rectangle */
-  border: 3px solid #333; /* Slightly thicker border */
-  margin-right: 20px; /* Adjust spacing between the image and details */
+  border-radius: 8px;
+  border: 3px solid #333;
+  margin-right: 20px;
 }
 
 .profile-details {
-  margin-top: -50%;
-  margin-left: 200px;
-  margin-bottom: 310px;
+  flex: 1;
   text-align: left;
-  font-size: 16px;
-  line-height: 2.5; /* Adjust line height to reduce spacing between details */
-  color: #333;
+  font-size: 15px;
+  color: #444;
+}
+
+.profile-details h2 {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.profile-details p {
+  margin: 5px 0;
 }
 
 .profile-details strong {
-  color: #000;
   font-weight: bold;
+  color: #000;
 }
 
 .profile-crimes {
   font-size: 16px;
   line-height: 1.6;
-  color: #333;
-  margin-top: 40px; /* Adds space between the details and crimes section */
-  margin-right: 300px;
-  margin-top: -60%;
-  margin-bottom: 200px;
+  color: #444;
+  margin-top: 20px;
 }
 
 .profile-crimes strong {
   font-weight: bold;
   color: #000;
 }
+
+/* IPC sections and bail result */
+.ipc-sections {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.ipc-sections h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.ipc-sections ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ipc-sections li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.bail-result {
+  margin-top: 15px;
+  background-color: #e6f7e6;
+  padding: 15px;
+  border: 1px solid #b8e6b8;
+  border-radius: 6px;
+}
+
+.bail-result h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  display: inline-block;
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 10px 0;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+#showIPCsbtn, #checkBailBtn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+/* Footer */
+

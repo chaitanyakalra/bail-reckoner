@@ -150,7 +150,7 @@
 //   &:hover {
 //     background-color: #1564c0;
 //     `;
-import navigate from 'navigate';
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Header from '../../components/Header/header';
@@ -164,11 +164,11 @@ export default function Login() {
 
   const onChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
-  };
-
+   };
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await fetch('http://localhost:4900/admin-enter', {
         method: 'POST',
@@ -180,10 +180,10 @@ export default function Login() {
           password: credentials.password,
         }),
       });
-
+  
       const json = await response.json();
       console.log('json', json);
-
+  
       if (!json.success) {
         if (json.message === 'Invalid credentials') {
           alert('Incorrect password. Please try again.');
@@ -193,12 +193,13 @@ export default function Login() {
       } else {
         console.log('Success:', json.message);
         localStorage.setItem('authToken', json.authToken);
-        navigate('/');
+        navigate('/convictDetails'); // Navigate to /convictDetails on success
       }
     } catch (error) {
       console.error('Error submitting form:', error);
     }
   };
+  
 
   return (
     <Wrapper>

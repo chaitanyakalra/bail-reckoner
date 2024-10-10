@@ -206,42 +206,42 @@
 //               required
 //             >
 //               <option value="" disabled>Select your state</option>
-//               <option value="AP">Andhra Pradesh</option>
-//               <option value="AR">Arunachal Pradesh</option>
-//               <option value="AS">Assam</option>
-//               <option value="BR">Bihar</option>
-//               <option value="CG">Chhattisgarh</option>
-//               <option value="GA">Goa</option>
-//               <option value="GJ">Gujarat</option>
-//               <option value="HR">Haryana</option>
-//               <option value="HP">Himachal Pradesh</option>
-//               <option value="JH">Jharkhand</option>
-//               <option value="KA">Karnataka</option>
-//               <option value="KL">Kerala</option>
-//               <option value="MH">Maharashtra</option>
-//               <option value="MP">Madhya Pradesh</option>
-//               <option value="MN">Manipur</option>
-//               <option value="ML">Meghalaya</option>
-//               <option value="MZ">Mizoram</option>
-//               <option value="NL">Nagaland</option>
-//               <option value="OD">Odisha</option>
-//               <option value="PB">Punjab</option>
-//               <option value="RJ">Rajasthan</option>
-//               <option value="SK">Sikkim</option>
-//               <option value="TN">Tamil Nadu</option>
-//               <option value="TR">Tripura</option>
-//               <option value="TG">Telangana</option>
-//               <option value="UP">Uttar Pradesh</option>
-//               <option value="UT">Uttarakhand</option>
-//               <option value="WB">West Bengal</option>
-//               <option value="AN">Andaman & Nicobar Islands (UT)</option>
-//               <option value="CH">Chandigarh (UT)</option>
-//               <option value="DN">Dadra & Nagar Haveli and Daman & Diu (UT)</option>
-//               <option value="DL">Delhi [National Capital Territory (NCT)]</option>
-//               <option value="JK">Jammu & Kashmir (UT)</option>
-//               <option value="LA">Ladakh (UT)</option>
-//               <option value="LD">Lakshadweep (UT)</option>
-//               <option value="PY">Puducherry (UT)</option>
+              // <option value="AP">Andhra Pradesh</option>
+              // <option value="AR">Arunachal Pradesh</option>
+              // <option value="AS">Assam</option>
+              // <option value="BR">Bihar</option>
+              // <option value="CG">Chhattisgarh</option>
+              // <option value="GA">Goa</option>
+              // <option value="GJ">Gujarat</option>
+              // <option value="HR">Haryana</option>
+              // <option value="HP">Himachal Pradesh</option>
+              // <option value="JH">Jharkhand</option>
+              // <option value="KA">Karnataka</option>
+              // <option value="KL">Kerala</option>
+              // <option value="MH">Maharashtra</option>
+              // <option value="MP">Madhya Pradesh</option>
+              // <option value="MN">Manipur</option>
+              // <option value="ML">Meghalaya</option>
+              // <option value="MZ">Mizoram</option>
+              // <option value="NL">Nagaland</option>
+              // <option value="OD">Odisha</option>
+              // <option value="PB">Punjab</option>
+              // <option value="RJ">Rajasthan</option>
+              // <option value="SK">Sikkim</option>
+              // <option value="TN">Tamil Nadu</option>
+              // <option value="TR">Tripura</option>
+              // <option value="TG">Telangana</option>
+              // <option value="UP">Uttar Pradesh</option>
+              // <option value="UT">Uttarakhand</option>
+              // <option value="WB">West Bengal</option>
+              // <option value="AN">Andaman & Nicobar Islands (UT)</option>
+              // <option value="CH">Chandigarh (UT)</option>
+              // <option value="DN">Dadra & Nagar Haveli and Daman & Diu (UT)</option>
+              // <option value="DL">Delhi [National Capital Territory (NCT)]</option>
+              // <option value="JK">Jammu & Kashmir (UT)</option>
+              // <option value="LA">Ladakh (UT)</option>
+              // <option value="LD">Lakshadweep (UT)</option>
+              // <option value="PY">Puducherry (UT)</option>
 //             </select>
 //           </div>
 
@@ -283,43 +283,164 @@
 // export default ConvictDetailsForm;
 
 
-import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import './convictdetails.css'; // Importing CSS
+// import Header from '../../components/Header/header.jsx';
+// import axios from 'axios';
+
+// const ConvictDetailsForm = () => {
+//   const [aadhaarCardId, setAadhaarCardId] = useState('');
+//   const [prisoner, setPrisoner] = useState(''); // Prisoner name to be fetched
+//   const [state, setState] = useState('');
+//   const [error, setError] = useState('');
+
+//   const navigate = useNavigate(); // Hook to navigate to other pages
+
+//   // Function to fetch prisoner details based on Aadhaar Card ID
+//   const fetchPrisonerName = async (aadhaar) => {
+//     try {
+//       const url = `http://localhost:4900/api/accused/crimes/${aadhaar}`;
+//       const response = await axios.get(url);
+//       if (response.data) {
+//         setPrisoner(response.data.name); // Assuming the response has 'name' field
+//         setError('');
+//       } else {
+//         setPrisoner('');
+//         setError('Criminal not found');
+//       }
+//     } catch (err) {
+//       setPrisoner('');
+//       setError('Error fetching criminal details');
+//     }
+//   };
+
+//   // Use effect to fetch prisoner name when Aadhaar Card ID changes
+//   useEffect(() => {
+//     if (aadhaarCardId.length === 12) { // Check if Aadhaar ID has 12 digits
+//       fetchPrisonerName(aadhaarCardId);
+//     }
+//   }, [aadhaarCardId]);
+
+//   // Handle form submission
+//   const handleSubmit = async (event) => {
+//     event.preventDefault();
+//     if (!aadhaarCardId) return;
+//     navigate(`/profile/${aadhaarCardId}`);
+//   };
+
+//   return (
+//     <div>
+//       <Header />
+//       <div className="container">
+//         <h1>Convict Details</h1>
+//         <form onSubmit={handleSubmit}>
+//           <div className="formGroup">
+//             <label htmlFor="aadhaarCardId">Aadhaar Card Number:</label>
+//             <input
+//               type="text"
+//               id="aadhaarCardId"
+//               name="aadhaarCardId"
+//               placeholder="Enter Aadhaar number"
+//               value={aadhaarCardId}
+//               onChange={(e) => setAadhaarCardId(e.target.value)}
+//               required
+//             />
+//           </div>
+
+//           <div className="formGroup">
+//             <label htmlFor="prisoner">Prisoner Name:</label>
+//             <input
+//               type="text"
+//               id="prisoner"
+//               name="prisoner"
+//               placeholder="Prisoner name will be auto-filled"
+//               value={prisoner}
+//               onChange={(e) => setPrisoner(e.target.value)} // Optional: allow manual changes
+//               readOnly
+//             />
+//           </div>
+
+//           <div className="formGroup">
+//             <label htmlFor="state">Jurisdiction:</label>
+//             <select
+//               name="state"
+//               id="state"
+//               value={state}
+//               onChange={(e) => setState(e.target.value)}
+//               required
+//             >
+//               <option value="" disabled>Select your state</option>
+//               <option value="AP">Andhra Pradesh</option>
+//               {/* Add other states here */}
+//             </select>
+//           </div>
+
+//           <button type="submit" disabled={!aadhaarCardId}>
+//             Get Details
+//           </button>
+//         </form>
+
+//         {error && <p style={{ color: 'red' }}>{error}</p>}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ConvictDetailsForm;
+
+
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './convictdetails.css'; // Importing CSS
 import Header from '../../components/Header/header.jsx';
-import Banner from '../../components/Banner/banner.jsx';
 import axios from 'axios';
 
 const ConvictDetailsForm = () => {
   const [aadhaarCardId, setAadhaarCardId] = useState('');
-  const [prisoner, setPrisoner] = useState('');
+  const [prisoner, setPrisoner] = useState(''); // Prisoner name to be fetched
   const [state, setState] = useState('');
   const [error, setError] = useState('');
 
   const navigate = useNavigate(); // Hook to navigate to other pages
 
-  // Handle form submission
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  // Function to fetch prisoner details based on Aadhaar Card ID
+  const fetchPrisonerName = async (aadhaar) => {
     try {
-      console.log("working");
-      const url = `http://localhost:4900/api/accused/crimes/${aadhaarCardId}`;
-      console.log("Constructed URL", url);
+      const url = `http://localhost:4900/api/accused/crimes/${aadhaar}`;
       const response = await axios.get(url);
       if (response.data) {
-        // Navigate to profile page if Aadhaar is valid
-        navigate(`/profile/${aadhaarCardId}`);
+        setPrisoner(response.data.name); // Assuming the response has 'name' field
+        setError('');
       } else {
+        setPrisoner('');
         setError('Criminal not found');
       }
     } catch (err) {
-      setError('Could not find criminal details for the given Aadhaar card ID');
+      setPrisoner('');
+      setError('Error fetching criminal details');
     }
+  };
+
+  // Use effect to fetch prisoner name when Aadhaar Card ID changes
+  useEffect(() => {
+    if (aadhaarCardId.length === 12) { // Check if Aadhaar ID has 12 digits
+      fetchPrisonerName(aadhaarCardId);
+    } else {
+      setPrisoner(''); // Reset prisoner name if Aadhaar ID is less than 12 digits
+    }
+  }, [aadhaarCardId]);
+
+  // Handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!aadhaarCardId) return;
+    navigate(`/profile/${aadhaarCardId}`);
   };
 
   return (
     <div>
-      <Header /> 
+      <Header />
       <div className="container">
         <h1>Convict Details</h1>
         <form onSubmit={handleSubmit}>
@@ -336,18 +457,17 @@ const ConvictDetailsForm = () => {
             />
           </div>
 
-          <div className="formGroup">
+          {/* <div className="formGroup">
             <label htmlFor="prisoner">Prisoner Name:</label>
             <input
               type="text"
               id="prisoner"
               name="prisoner"
-              placeholder="Enter prisoner name"
-              value={prisoner}
-              onChange={(e) => setPrisoner(e.target.value)}
-              required
+              placeholder="Prisoner name will be auto-filled"
+              value={prisoner.name}
+              onChange={(e) => setPrisoner(e.target.value)} // Allow manual changes
             />
-          </div>
+          </div> */}
 
           <div className="formGroup">
             <label htmlFor="state">Jurisdiction:</label>
@@ -360,7 +480,42 @@ const ConvictDetailsForm = () => {
             >
               <option value="" disabled>Select your state</option>
               <option value="AP">Andhra Pradesh</option>
-              {/* Add other states here */}
+              <option value="AP">Andhra Pradesh</option>
+              <option value="AR">Arunachal Pradesh</option>
+              <option value="AS">Assam</option>
+              <option value="BR">Bihar</option>
+              <option value="CG">Chhattisgarh</option>
+              <option value="GA">Goa</option>
+              <option value="GJ">Gujarat</option>
+              <option value="HR">Haryana</option>
+              <option value="HP">Himachal Pradesh</option>
+              <option value="JH">Jharkhand</option>
+              <option value="KA">Karnataka</option>
+              <option value="KL">Kerala</option>
+              <option value="MH">Maharashtra</option>
+              <option value="MP">Madhya Pradesh</option>
+              <option value="MN">Manipur</option>
+              <option value="ML">Meghalaya</option>
+              <option value="MZ">Mizoram</option>
+              <option value="NL">Nagaland</option>
+              <option value="OD">Odisha</option>
+              <option value="PB">Punjab</option>
+              <option value="RJ">Rajasthan</option>
+              <option value="SK">Sikkim</option>
+              <option value="TN">Tamil Nadu</option>
+              <option value="TR">Tripura</option>
+              <option value="TG">Telangana</option>
+              <option value="UP">Uttar Pradesh</option>
+              <option value="UT">Uttarakhand</option>
+              <option value="WB">West Bengal</option>
+              <option value="AN">Andaman & Nicobar Islands (UT)</option>
+              <option value="CH">Chandigarh (UT)</option>
+              <option value="DN">Dadra & Nagar Haveli and Daman & Diu (UT)</option>
+              <option value="DL">Delhi [National Capital Territory (NCT)]</option>
+              <option value="JK">Jammu & Kashmir (UT)</option>
+              <option value="LA">Ladakh (UT)</option>
+              <option value="LD">Lakshadweep (UT)</option>
+              <option value="PY">Puducherry (UT)</option>
             </select>
           </div>
 
