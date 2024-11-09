@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Bail Reckoner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **Bail Reckoner** is a digital solution designed to assist legal administrators, undertrial prisoners, legal aid providers, and judicial authorities in managing and evaluating bail eligibility. This tool streamlines the bail application and evaluation process by considering various legal and procedural parameters, making the bail process more transparent, efficient, and just.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Case Management**: Allows the admin to input, verify, and update case details, including offenses, court jurisdiction, and duration of imprisonment.
+- **Bail Eligibility Check**: Automatically assesses the eligibility of undertrial prisoners for bail based on factors like offense type, time served, and judicial discretion.
+- **Guidance on Procedural Steps**: Provides a clear procedural guide for admins on necessary documentation and steps for submitting bail applications.
+- **Legal Database**: Integrates data from the IPC, CrPC, and relevant Indian legal codes for accurate and up-to-date bail assessments.
+- **Integration with Government Database (Optional)**: If available, the system can fetch relevant case details from judicial databases.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the Repository**
+    ```bash
+    git clone https://github.com/chaitanyakalra/bail_reckoner.git
+    cd bail_reckoner
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+3. **Install Dependencies**  
+Ensure you have `npm` installed, then run:
+    ```bash
+    npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. **Run the Application**  
+Start the application by running:
+    ```bash
+    npm start
 
-### `npm run build`
+7. **Access the Application**  
+Open your web browser and go to `http://localhost:3000` to start using the Bail Reckoner.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Workflow
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 1: Admin Login
+- The admin logs in to access the case management dashboard.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 2: Input Case Information (for User or Manual Entry)
+- The admin may either input case information manually for a specific prisoner or verify/update existing case data.
 
-### `npm run eject`
+- **Manual Input**: The admin enters or updates:
+   - Case number
+   - Charges/offenses listed
+   - Court name and jurisdiction
+   - Duration of imprisonment already served
+   
+- **Automatic Integration**: If integrated with a government/judicial database, the system may automatically fetch relevant case data, which the admin can review.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Resources
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Bail Reckoner Presentation (PDF)](https://github.com/user-attachments/files/17686799/Bail_Recknoer_ppt.pdf)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Demo Video on YouTube
+[![Watch the video](https://img.youtube.com/vi/_A2uPc0SlwM/0.jpg)](https://www.youtube.com/watch?v=_A2uPc0SlwM)
